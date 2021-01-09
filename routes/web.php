@@ -81,6 +81,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('section/students/{section_id}', 'UserController@sectionStudents');
 
     Route::get('courses/{teacher_id}/{section_id}', 'CourseController@index');
+
+
 });
 
 Route::middleware(['auth', 'teacher'])->group(function () {
@@ -111,6 +113,11 @@ Route::middleware(['auth', 'admin'])->prefix('academic')->name('academic.')->gro
 Route::middleware(['auth', 'student'])->group(function () {
     Route::get('user/{id}/notifications', 'NotificationController@index');
     Route::get('academic/student/certificates', 'CertificateController@index');
+    Route::any('user/{id}/MyDocuments',
+        'MyDocumentController@index');
+    Route::post('user/submit',
+        'MyDocumentController@index');
+
 });
 
 Route::middleware(['auth', 'admin'])->prefix('exams')->name('exams.')->group(function () {

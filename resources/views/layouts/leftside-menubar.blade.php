@@ -187,14 +187,20 @@
       @endif
     </a>
   </li>
+    <li class="nav-item">
+    <a class="nav-link" href="
+    {{url('user/'.Auth::user()->id.'/MyDocuments') }}"><i class="material-icons">bubble_chart</i>
+      <span class="nav-link-text">@lang('My Document')</span></a>
+  </li>
+
   <li class="nav-item">
     <a class="nav-link" href="{{ url('courses/0/'.Auth::user()->section_id) }}"><i class="material-icons">subject</i>
       <span class="nav-link-text">@lang('My Courses')</span></a>
   </li>
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{ url('grades/'.Auth::user()->id) }}"><i class="material-icons">bubble_chart</i> <span
         class="nav-link-text">@lang('My Grade')</span></a>
-  </li>
+  </li> -->
   <li class="nav-item">
     <a class="nav-link" href="{{url('stripe/charge')}}"><i class="material-icons">payment</i> <span class="nav-link-text">@lang('Payment')</span></a>
   </li>
