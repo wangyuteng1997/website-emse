@@ -36,7 +36,7 @@
     <a class="nav-link" href="{{ url('home') }}"><i class="material-icons">dashboard</i> <span class="nav-link-text">@lang('Dashboard')</span></a>
   </li>
   @if(Auth::user()->role == 'admin')
-  <li class="nav-item dropdown">
+<!--   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">date_range</i> <span class="nav-link-text">@lang('Attendance')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
@@ -51,9 +51,9 @@
         <a class="dropdown-item" href="#"><i class="material-icons">account_balance_wallet</i> <span class="nav-link-text">@lang('Staff Attendance')</span></a>
       </li>
     </ul>
-  </li>
+  </li> -->
   <li class="nav-item">
-    <a class="nav-link" href="{{ url('school/sections?course=1') }}"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Classes &amp; Sections')</span></a>
+    <a class="nav-link" href="{{ url('school/Candidature') }}"><i class="material-icons">class</i> <span class="nav-link-text">@lang('Candidature')</span></a>
   </li>
   @endif
   @if(Auth::user()->role != 'student')
@@ -67,11 +67,11 @@
   </li>
   @endif
   @if(Auth::user()->role == 'admin')
-  <li class="nav-item dropdown">
+<!--   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">line_style</i> <span class="nav-link-text">@lang('Exams')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
+
       <li>
         <a class="dropdown-item" href="{{ url('exams/create') }}"><i class="material-icons">note_add</i> <span class="nav-link-text">@lang('Add Examination')</span></a>
       </li>
@@ -83,35 +83,35 @@
         <a class="dropdown-item" href="{{ url('exams') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Manage Examinations')</span></a>
       </li>
     </ul>
-  </li>
-  <li class="nav-item">
+  </li> -->
+  <!-- <li class="nav-item">
     <a class="nav-link" href="{{ url('grades/all-exams-grade') }}"><i class="material-icons">assignment</i> <span class="nav-link-text">@lang('Grades')</span></a>
-  </li>
+  </li> -->
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li>
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/routine') }}"><i class="material-icons">calendar_today</i> <span class="nav-link-text">@lang('Class Routine')</span></a>
-  </li>
-  <li class="nav-item">
+  </li> -->
+  <!-- <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/syllabus') }}"><i class="material-icons">vertical_split</i> <span class="nav-link-text">@lang('Syllabus')</span></a>
-  </li>
+  </li> -->
   <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/notice') }}"><i class="material-icons">announcement</i> <span class="nav-link-text">@lang('Notice')</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/event') }}"><i class="material-icons">event</i> <span class="nav-link-text">@lang('Event')</span></a>
   </li>
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{ url('academic/certificate') }}"><i class="material-icons">verified</i> <span class="nav-link-text">Certificate</span></a>
-  </li>
+  </li> -->
   <li class="nav-item" style="border-bottom: 1px solid #dbd8d8;"></li>
   <li class="nav-item">
     <a class="nav-link" href="{{ route('settings.index') }}"><i class="material-icons">settings</i> <span class="nav-link-text">@lang('Academic Settings')</span></a>
   </li>
-  <li class="nav-item dropdown">
+<!--   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-        class="material-icons">chrome_reader_mode</i> <span class="nav-link-text">@lang('Manage GPA')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
-    <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
+        class="material-icons">chrome_reader_mode</i> <span class="nav-link-text">@lang('Manage GPA')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a> -->
+    <!-- <ul class="dropdown-menu" style="width: 100%;">
+      
       <li>
         <a class="dropdown-item" href="{{ url('gpa/all-gpa') }}"><i class="material-icons">developer_board</i> <span
             class="nav-link-text">@lang('All GPA')</span></a>
@@ -119,15 +119,15 @@
       <li>
         <a class="dropdown-item" href="{{ url('gpa/create-gpa') }}"><i class="material-icons">note_add</i> <span class="nav-link-text">@lang('Add New GPA')</span></a>
       </li>
-    </ul>
-  </li>
+    </ul> -->
+ <!--  </li> -->
   @endif
-  @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accountant')
+<!--   @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accountant')
   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">monetization_on</i> <span class="nav-link-text">@lang('Fees Generator')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
+
       <li>
         <a class="dropdown-item" href="{{ url('fees/all') }}"><i class="material-icons">developer_board</i> <span class="nav-link-text">@lang('Generate Form')</span></a>
       </li>
@@ -136,14 +136,14 @@
       </li>
     </ul>
   </li>
-  @endif
+  @endif -->
    
-  @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accountant')
+<!--   @if(Auth::user()->role == 'admin' || Auth::user()->role == 'accountant')
   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">account_balance_wallet</i> <span class="nav-link-text">@lang('Manage Accounts')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
+      
       <li>
         <a class="dropdown-item" href="{{url('users/'.Auth::user()->school->code.'/accountant')}}"><i class="material-icons">account_balance_wallet</i>
           <span class="nav-link-text">@lang('Accountant List')</span></a>
@@ -169,12 +169,12 @@
       </li>
     </ul>
   </li>
-  @endif
+  @endif -->
   @if(Auth::user()->role == 'student')
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link active" href="{{ url('attendances/0/'.Auth::user()->id.'/0') }}"><i class="material-icons">date_range</i>
       <span class="nav-link-text">@lang('My Attendance')</span></a>
-  </li>
+  </li> -->
   <li class="nav-item">
     <a class="nav-link" href="{{url('user/'.Auth::user()->id.'/notifications')}}">
       <i class="material-icons">email</i> 
@@ -192,11 +192,17 @@
     {{url('user/'.Auth::user()->id.'/MyDocuments') }}"><i class="material-icons">bubble_chart</i>
       <span class="nav-link-text">@lang('My Document')</span></a>
   </li>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="
+    {{url('msc/result') }}"><i class="material-icons">verified</i>
+      <span class="nav-link-text">@lang('Result of the Msc')</span></a>
+  </li>
 
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{ url('courses/0/'.Auth::user()->section_id) }}"><i class="material-icons">subject</i>
       <span class="nav-link-text">@lang('My Courses')</span></a>
-  </li>
+  </li> -->
 <!--   <li class="nav-item">
     <a class="nav-link" href="{{ url('grades/'.Auth::user()->id) }}"><i class="material-icons">bubble_chart</i> <span
         class="nav-link-text">@lang('My Grade')</span></a>
@@ -204,21 +210,21 @@
   <li class="nav-item">
     <a class="nav-link" href="{{url('stripe/charge')}}"><i class="material-icons">payment</i> <span class="nav-link-text">@lang('Payment')</span></a>
   </li>
-  <li class="nav-item">
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{url('stripe/receipts')}}"><i class="material-icons">receipt</i> <span class="nav-link-text">@lang('Receipt')</span></a>
-  </li>
-  <li class="nav-item">
+  </li> -->
+<!--   <li class="nav-item">
     <a class="nav-link" href="{{url('academic/student/certificates')}}"><i class="material-icons">verified</i> <span class="nav-link-text">Certificates</span></a>
-  </li>
+  </li> -->
   @endif
   {{--<div style="text-align:center;">@lang('Student')</div>--}}
   {{--<div style="text-align:center;">@lang('Teacher')</div>--}}
-  @if(Auth::user()->role == 'admin' || Auth::user()->role == 'librarian')
+<!--   @if(Auth::user()->role == 'admin' || Auth::user()->role == 'librarian')
   <li class="nav-item dropdown">
     <a role="button" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
         class="material-icons">local_library</i> <span class="nav-link-text">@lang('Manage Library')</span> <i class="material-icons pull-right">keyboard_arrow_down</i></a>
     <ul class="dropdown-menu" style="width: 100%;">
-      <!-- Dropdown menu links -->
+     
       <li>
         <a class="dropdown-item" href="{{url('users/'.Auth::user()->school->code.'/librarian')}}"><i class="material-icons">local_library</i>
           <span class="nav-link-text">@lang('Librarian List')</span></a>
@@ -241,7 +247,7 @@
       </li>
     </ul>
   </li>
-  @endif
+  @endif -->
   @if(Auth::user()->role == 'teacher')
   <li class="nav-item">
     <a class="nav-link" href="{{ url('courses/'.Auth::user()->id.'/0') }}"><i class="material-icons">import_contacts</i>

@@ -35,21 +35,21 @@
                                 <div class="card-header">@lang('Teachers') - <b>{{$totalTeachers}}</b></div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+<!--                         <div class="col-sm-4">
                             <div class="card text-white bg-dark mb-3">
                                 <div class="card-header">@lang('Types of Books In Library') - <b>{{$totalBooks}}</b></div>
                             </div>
-                        </div>
-                        <div class="col-sm-2">
+                        </div> -->
+<!--                         <div class="col-sm-2">
                             <div class="card text-white bg-danger mb-3">
                                 <div class="card-header">@lang('Classes') - <b>{{$totalClasses}}</b></div>
                             </div>
-                        </div>
-                        <div class="col-sm-2">
+                        </div> -->
+<!--                         <div class="col-sm-2">
                             <div class="card text-white bg-info mb-3">
                                 <div class="card-header">@lang('Sections') - <b>{{$totalSections}}</b></div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <p></p>
                     <div class="row">
@@ -57,7 +57,7 @@
                             <div class="panel panel-default" style="background-color: rgba(242,245,245,0.8);">
                                 <div class="panel-body">
                                     <h3>@lang('Welcome to') {{Auth::user()->school->name}}</h3>
-                                    @lang('Your presence and cooperation will help us to improve the education system of our organization.')
+                                    @lang('Msc in EMSE')
                                 </div>
                             </div>
                             <div class="panel panel-default">
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <!-- <div class="col-sm-4">
                             <div class="panel panel-default">
                                 <div class="page-panel-title">@lang('Routines')</div>
                                 <div class="panel-body pre-scrollable">
@@ -154,8 +154,8 @@
                                     @endif
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4">
+                        </div> -->
+<!--                         <div class="col-sm-4">
                             <div class="panel panel-default">
                                 <div class="page-panel-title">@lang('Syllabus')</div>
                                 <div class="panel-body pre-scrollable">
@@ -177,7 +177,7 @@
                                     @endif
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

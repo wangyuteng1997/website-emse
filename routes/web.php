@@ -61,6 +61,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('gpa/create-gpa', 'GradesystemController@create');
     Route::post('create-gpa', 'GradesystemController@store');
     Route::post('gpa/delete', 'GradesystemController@destroy');
+
+    Route::get('school/Candidature', 'CandidatureController@index');
+    Route::get('download/photo', 'DownloadController@downloadphoto');
+    Route::post('user/submit/Operation', 'OperationController@index');
 });
 
 Route::middleware(['auth', 'teacher'])->group(function () {
@@ -117,7 +121,8 @@ Route::middleware(['auth', 'student'])->group(function () {
         'MyDocumentController@index');
     Route::post('user/submit',
         'MyDocumentController@index');
-
+    Route::any('msc/result',
+        'ResultController@index');
 });
 
 Route::middleware(['auth', 'admin'])->prefix('exams')->name('exams.')->group(function () {
