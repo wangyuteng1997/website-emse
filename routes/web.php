@@ -123,6 +123,8 @@ Route::middleware(['auth', 'student'])->group(function () {
         'MyDocumentController@index');
     Route::any('msc/result',
         'ResultController@index');
+    Route::any('search/result',
+        'ResultController@Result');
 });
 
 Route::middleware(['auth', 'admin'])->prefix('exams')->name('exams.')->group(function () {

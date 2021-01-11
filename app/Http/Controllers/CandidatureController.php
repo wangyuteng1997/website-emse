@@ -16,7 +16,7 @@ class CandidatureController extends Controller
         
          $candidature = Submit::get();
 
-
+         
     	$view = 'Candidature.CandidatureList';
     	return view($view,['candidature' => $candidature]);
     }

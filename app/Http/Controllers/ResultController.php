@@ -17,9 +17,20 @@ class ResultController extends Controller
        }else{
         $view = 'Result.Result';
     	return view($view);
+
        }
+   }
 
-
-   
+    public function Result(Request $request){
+    	$email = $request -> input('email');
+    	$opera = Submit::where("email",'=',$email) -> get();
+      // dd($opera);
+      foreach ($opera as $key =>$value) { 
+        echo 'the Result of your Msc is  ' . $value ->operation ;
+      }
+    	$view = 'Result.Result2';
+    	return view($view) -> with('opera',$opera);
     }
+
+        
 }

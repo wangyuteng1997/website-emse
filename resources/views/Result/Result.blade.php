@@ -13,35 +13,16 @@
                <h2>@lang('Result of Candidature')</h2>
                <div class="panel panel-default">
                   <div class="panel-body">
-                     <form  method="post" action="{{ url('user/submit/Operation') }}" >
+                     <form  method="post" action="{{ url('search/result') }}" >
                           @csrf
                           imput your email address to search results
+                          <br>
                            <input type="email" name="email" />
                            <input type="submit" value="submit">
                           </form>
 
 
-                    <table border="1" width="300"> 
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Last Name</th>
-                          <th>First Name</th>
-                          <th>Status</th>
-                        </tr>>                   
-                      </thead>
-                      <tbody>
-                        <tr>
-                         <th >1</th>
-                         <td>1</td>
-                         <td>1</td>
-                         <td>1</td>
-
-                        </tr>
-
-                      </tbody>
-                    </table>
-
+                    
 
                       
                   </div>
