@@ -25,7 +25,7 @@
                     @endif
                     <div class="row">
                         <div class="page-panel-title">@lang('Dashboard')</div>
-                        <div class="col-sm-2">
+  <!--                       <div class="col-sm-2">
                             <div class="card text-white bg-primary mb-3">
                                 <div class="card-header">@lang('Students') - <b>{{$totalStudents}}</b></div>
                             </div>
@@ -34,7 +34,7 @@
                             <div class="card text-white bg-success mb-3">
                                 <div class="card-header">@lang('Teachers') - <b>{{$totalTeachers}}</b></div>
                             </div>
-                        </div>
+                        </div> -->
 <!--                         <div class="col-sm-4">
                             <div class="card text-white bg-dark mb-3">
                                 <div class="card-header">@lang('Types of Books In Library') - <b>{{$totalBooks}}</b></div>
@@ -61,26 +61,84 @@
                                 </div>
                             </div>
                             <div class="panel panel-default">
-                                <div class="page-panel-title">@lang('Active Exams')</div>
+                                <div class="page-panel-title">@lang('List of Msc in EMSE')</div>
                                 <div class="panel-body">
-                                    @if(count($exams) > 0)
+                                    
                                     <table class="table">
                                         <tr>
-                                            <th>@lang('Exam Name')</th>
-                                            <th>@lang('Notice Published')</th>
-                                            <th>@lang('Result Published')</th>
-                                        </tr>
-                                        @foreach($exams as $exam)
+                                            <th>@lang('Msc Name')</th>
+
+                                        
                                         <tr>
-                                            <td>{{$exam->exam_name}}</td>
-                                            <td>{{($exam->notice_published === 1)?__('Yes'):__('No')}}</td>
-                                            <td>{{($exam->result_published === 1)?__('Yes'):__('No')}}</td>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-chimie-science-materiaux-mse/">•   Master Chimie et Science des Matériaux (MSE)</a></td>
                                         </tr>
-                                        @endforeach
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/cyber-physical-social-systems-cps2/">•    Master Cyber‐Physical Social Systems (CPS2)</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-donnees-systemes-connectes-dsc/">
+                                            •   Master Données et Systèmes Connectés (DSC)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/genie-des-procedes-et-efficacite-energetique-industrielle-pei2e/">
+                                            •   Master Génie des Procédés et Efficacité Énergétique Industrielle (PEI2E)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-geospheres/">
+                                           •    Master GEOgraphies – eSPaces – Homme/Environnement – Ressources (GEOSPHERES)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-hybrid-electronics/">
+                                            •    Master Hybrid Electronics (HYBELEC)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-ingenierie-de-la-sante-bmed/">
+                                            •   Master Ingénierie de la Santé (BMED)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-mathematical-imaging-and-spatial-pattern-analysis-mispa/">
+                                            •   Master Mathematical Imaging and Spatial Pattern Analysis (MISPA)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-maths-action-mea/">
+                                            •   Master Maths en Action (MAEA)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-mecanique-des-materiaux-et-des-procedes-mmp/">
+                                            •   Master Mécanique des Matériaux et des Procédés (MMP)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-tribologie-et-ingenierie-des-surfaces-tse/">
+                                            •   Master Tribologie et Ingénierie des Surfaces (TSE)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-sciences-de-l-environnement-industriel-et-urbain-seiu/">
+                                            •   Master Sciences de l’Environnement Industriel et Urbain (SEIU)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-methodes-avancees-de-genie-industriel-ieor/">
+                                            •   Master Méthodes Avancées de Génie Industriel (IEOR)
+                                        </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.mines-stetienne.fr/formation/master-prospective-design-prode/">
+                                            •   Master Prospective Design (PRODE)
+                                        </a></td>
+                                        </tr>
+
+                                        
                                     </table>
-                                    @else
-                                    @lang('No Active Examination')
-                                    @endif
+                                
                                 </div>
                             </div>
                         </div>

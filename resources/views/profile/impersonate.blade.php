@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Impersonate'))
+<!-- @section('title', __('Impersonate')) -->
 
 @section('content')
 <div class="container">

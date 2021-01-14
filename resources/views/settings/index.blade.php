@@ -22,52 +22,7 @@
                                     <td>{{ $school->name }}</td>
                                     <td>{{ $school->code }}</td>
                                 </tr>
-                                <tr>
-                                    <th scope="col">@lang('Department')</th>
-                                    <th scope="col">@lang('Classes')</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#departmentModal">+ @lang('Create Department')</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="departmentModal" tabindex="-1" role="dialog" aria-labelledby="departmentModalLabel">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                        <h4 class="modal-title" id="departmentModalLabel">@lang('Create Department')</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form class="form-horizontal" action="{{url('school/add-department')}}" method="post">
-                                                            {{csrf_field()}}
-                                                            <div class="form-group">
-                                                                <label for="department_name" class="col-sm-2 control-label">@lang('Department Name')</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" id="department_name" name="department_name" placeholder="@lang('English, Mathematics,...')">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <div class="col-sm-offset-2 col-sm-10">
-                                                                    <button type="submit" class="btn btn-danger btn-sm">@lang('Submit')</button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">@lang('Close')</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <a href="#collapse" role="button" class="btn btn-danger btn-sm" data-toggle="collapse" aria-expanded="false" aria-controls="collapse">
-                                            <i class="material-icons">class</i> @lang('Manage Class, Section')
-                                        </a>
-                                    </td>
-                                </tr>
+
                                 <tr class="collapse" id="collapse" aria-labelledby="heading" aria-expanded="false">
                                     <td colspan="12">
                                         @include('layouts.master.add-class-form')
@@ -132,8 +87,8 @@
                                 <tr>
                                     <th scope="col">+@lang('Student')</th>
                                     <th scope="col">+@lang('Teacher')</th>
-                                    <th scope="col">+@lang('Accountant')</th>
-                                    <th scope="col">+@lang('Librarian')</th>
+<!--                                     <th scope="col">+@lang('Accountant')</th>
+                                    <th scope="col">+@lang('Librarian')</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -152,12 +107,12 @@
                                         @component('components.excel-upload-form', ['type'=>'teacher'])
                                         @endcomponent
                                     </td>
-                                    <td>
+<!--                                     <td>
                                         <a class="btn btn-default btn-sm" href="{{url('register/accountant')}}">+ @lang('Add Accountant')</a>
                                     </td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="{{url('register/librarian')}}">+ @lang('Add Librarian')</a>
-                                    </td>
+                                    </td> -->
                                 </tr>
                             </tbody>
                         </table>
