@@ -28,6 +28,7 @@
                           <th>Phone number</th>
                           <th>Email</th>
                           <th>Subimit time</th>
+                          <th>Msc</th>
                           <th>Photo</th>
                           <th>Letter</th>
                           <th>Operation</th>
@@ -49,6 +50,7 @@
                          <td>{{ $candi->Phonenumber }}</td>
                          <td>{{ $candi->email }}</td>
                          <td>{{ $candi->submit_time }}</td>
+                         <td>{{ $candi->msc }}</td>
                          <td><a href="{{url($candi->photo)}}" download="">Download photo</a>
                          </td>
                          <td><a href="{{url($candi->Letter)}}" download="">Download Letter of application</a>

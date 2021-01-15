@@ -68,6 +68,27 @@
                      </script>
                      <!-- <input type="hidden" name="_token" value="{{csrf_token()}}" /> -->
                      <br>
+                     msc that you want to apply:
+                     <br>
+                    <div class="col-md-8">
+                     <input name="msc[]" type="checkbox" value="MSE " >MSE 
+                     <input name="msc[]" type="checkbox" value="CPS2" >CPS2 
+                     <input name="msc[]" type="checkbox" value="DSC" >DSC 
+                     <input name="msc[]" type="checkbox" value="PEI2E" >PEI2E 
+                     <br>
+                     <input name="msc[]" type="checkbox" value="GEOSPHERES" >GEOSPHERES 
+                     <input name="msc[]" type="checkbox" value="HYBELEC" >HYBELEC 
+                     <input name="msc[]" type="checkbox" value="BMED" >BMED 
+                     <input name="msc[]" type="checkbox" value="MISPA" >MISPA 
+                     <br>
+                     <input name="msc[]" type="checkbox" value="MAEA" >MAEA 
+                     <input name="msc[]" type="checkbox" value="MMP" >MMP 
+                     <input name="msc[]" type="checkbox" value="TSE" >TSE 
+                     <input name="msc[]" type="checkbox" value="SEIU" >SEIU 
+                     <br>
+                     <input name="msc[]" type="checkbox" value="IEOR" >IEOR 
+                     <input name="msc[]" type="checkbox" value="PRODE" >PRODE 
+                    </div>
                      <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width="100%" color=#987cb9 SIZE=3>
                      
                      <h3>

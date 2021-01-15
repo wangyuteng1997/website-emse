@@ -77,7 +77,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="m-b-md">
-                    <h1>EMSE mcs </h1>>
+                    <h1>EMSE msc </h1>>
                     <img src="school.svg" width="500">
                 </div>
                 <!-- <p style="font-size: 25px;">@lang('Makes managing schools an amazing experience')</p> -->
